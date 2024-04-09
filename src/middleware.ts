@@ -9,13 +9,13 @@ export function middleware(request: NextRequest) {
 
     let cookie = request.cookies.get(ACCESS_TOKEN)
     if (!cookie) {
-        // url.pathname = '/signin'
-        // return NextResponse.redirect(url)
-    }
-    if (url.pathname =="/") {
-        url.pathname = '/devices/page/1'
+        url.pathname = '/signin'
         return NextResponse.redirect(url)
     }
+    // if (url.pathname =="/") {
+    //     url.pathname = '/devices/page/1'
+    //     return NextResponse.redirect(url)
+    // }
     return NextResponse.next()
 }
 
